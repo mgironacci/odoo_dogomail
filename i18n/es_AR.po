@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_dogomail
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-21 00:23+0000\n"
+"PO-Revision-Date: 2023-02-20 21:26-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/models/suscripcion_line.py:0
+#, python-format
+msgid " - period %(month)s/%(year)s"
+msgstr " - periodo %(month)s/%(year)s"
+
+#. module: sale_dogomail
+#: model:product.attribute.value,name:sale_dogomail.dogomail_casillas_10
+msgid "10"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:product.attribute.value,name:sale_dogomail.dogomail_peso_10
+msgid "10GB"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:product.attribute.value,name:sale_dogomail.dogomail_peso_15
+msgid "15GB"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:product.attribute.value,name:sale_dogomail.dogomail_peso_1
+msgid "1GB"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:product.attribute.value,name:sale_dogomail.dogomail_casillas_25
+msgid "25"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:product.attribute.value,name:sale_dogomail.dogomail_casillas_50
+msgid "50"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:product.attribute.value,name:sale_dogomail.dogomail_peso_5
+msgid "5GB"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:product.template,name:sale_dogomail.dogomail_dominio_mbox
+msgid "Account Mail Domain"
+msgstr "Dominio Correo con Casillas"
+
+#. module: sale_dogomail
+#: model:product.template,name:sale_dogomail.dogomail_dominio_fwd
+msgid "Forwarding Mail Domain"
+msgstr "Dominio Correo con Reenvío"
+
+#. module: sale_dogomail
+#: model:product.product,name:sale_dogomail.dogomail_dominio_free
+#: model:product.template,name:sale_dogomail.dogomail_dominio_free_product_template
+msgid "Free Mail Domain 5 mailbox 1GB"
+msgstr "Dominio Correo Gratis 5 casillas 1GB"
+
+#. module: sale_dogomail
+#: model:product.product,description_sale:sale_dogomail.dogomail_dominio_free
+#: model:product.template,description_sale:sale_dogomail.dogomail_dominio_free_product_template
+msgid ""
+"Free mail domain with 5 mailbox for education or Non-Profit organizations."
+msgstr ""
+"Dominio de correo gratis con 5 casillas de 1GB cada una para educación o "
+"ONGs."
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/models/suscripcion.py:0
+#, python-format
+msgid "Item %(seq)s used rate: %(sim)s %(val)s<br/>"
+msgstr "Tasa aplicada al item %(seq)s: %(sim)s %(val)s<br/>"
+
+#. module: sale_dogomail
+#: model:product.template,description_sale:sale_dogomail.dogomail_dominio_mbox
+msgid "Mail domain with antispam and zimbra hosted mailbox."
+msgstr "Dominio de correo con antispam y casillas de correo zimbra."
+
+#. module: sale_dogomail
+#: model:product.template,description_sale:sale_dogomail.dogomail_dominio_fwd
+msgid "Mail domain with forwarding antispam."
+msgstr "Dominio de correo con antispam y reenvío."
+
+#. module: sale_dogomail
+#: model:product.attribute,name:sale_dogomail.dogomail_casillas
+msgid "Mailbox"
+msgstr "Casilla"
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/models/suscripcion.py:0
+#, python-format
+msgid ""
+"No journal could be found in company %(company_name)s for any of those "
+"types: %(journal_types)s"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:product.attribute.value,name:sale_dogomail.dogomail_tipo_pro
+msgid "PRO"
+msgstr "PRO"
+
+#. module: sale_dogomail
+#: model:product.attribute,name:sale_dogomail.dogomail_peso
+msgid "Size"
+msgstr "Tamaño"
+
+#. module: sale_dogomail
+#: model:product.attribute.value,name:sale_dogomail.dogomail_tipo_std
+msgid "Standard"
+msgstr "Estandar"
+
+#. module: sale_dogomail
+#: model:product.attribute,name:sale_dogomail.dogomail_tipo
+msgid "Type"
+msgstr "Tipo"
+
+#. module: sale_dogomail
+#: model:product.product,uom_name:sale_dogomail.dogomail_dominio_free
+#: model:product.template,uom_name:sale_dogomail.dogomail_dominio_free_product_template
+#: model:product.template,uom_name:sale_dogomail.dogomail_dominio_fwd
+#: model:product.template,uom_name:sale_dogomail.dogomail_dominio_mbox
+msgid "Units"
+msgstr "Unidades"

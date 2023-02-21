@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record model="product.product" id="dogomail_dominio_free">
+      <field name="name">Free Mail Domain 5 mailbox 1GB</field>
+      <field name="is_published" eval="True"/>
+      <field name="type">service</field>
+      <field name="uom_id" ref="uom.product_uom_unit"/>
+      <field name="uom_po_id" ref="uom.product_uom_unit"/>
+      <field name="description_sale">Free mail domain with 5 mailbox for education or Non-Profit organizations.</field>
+      <field name="categ_id" ref="product.product_category_1"/>
+      <field name="invoice_policy">delivery</field>
+      <field name="service_policy">delivered_manual</field>
+      <field name="image_1920" type="base64" file="sale_dogomail/static/src/img/dogofree.png"/>
+    </record>
+
+    <record id="dogomail_tipo" model="product.attribute">
+      <field name="name">Type</field>
+      <field name="sequence">10</field>
+    </record>
+    <record id="dogomail_tipo_std" model="product.attribute.value">
+      <field name="name">Standard</field>
+      <field name="attribute_id" ref="dogomail_tipo"/>
+    </record>
+    <record id="dogomail_tipo_pro" model="product.attribute.value">
+      <field name="name">PRO</field>
+      <field name="attribute_id" ref="dogomail_tipo"/>
+    </record>
+
+    <record id="dogomail_casillas" model="product.attribute">
+      <field name="name">Mailbox</field>
+      <field name="sequence">20</field>
+    </record>
+    <record id="dogomail_casillas_5" model="product.attribute.value">
+      <field name="name">5</field>
+      <field name="attribute_id" ref="dogomail_casillas"/>
+    </record>
+    <record id="dogomail_casillas_10" model="product.attribute.value">
+      <field name="name">10</field>
+      <field name="attribute_id" ref="dogomail_casillas"/>
+    </record>
+    <record id="dogomail_casillas_25" model="product.attribute.value">
+      <field name="name">25</field>
+      <field name="attribute_id" ref="dogomail_casillas"/>
+    </record>
+    <record id="dogomail_casillas_50" model="product.attribute.value">
+      <field name="name">50</field>
+      <field name="attribute_id" ref="dogomail_casillas"/>
+    </record>
+
+    <record id="dogomail_peso" model="product.attribute">
+      <field name="name">Size</field>
+      <field name="sequence">30</field>
+    </record>
+    <record id="dogomail_peso_1" model="product.attribute.value">
+      <field name="name">1GB</field>
+      <field name="attribute_id" ref="dogomail_peso"/>
+    </record>
+    <record id="dogomail_peso_5" model="product.attribute.value">
+      <field name="name">5GB</field>
+      <field name="attribute_id" ref="dogomail_peso"/>
+    </record>
+    <record id="dogomail_peso_10" model="product.attribute.value">
+      <field name="name">10GB</field>
+      <field name="attribute_id" ref="dogomail_peso"/>
+    </record>
+    <record id="dogomail_peso_15" model="product.attribute.value">
+      <field name="name">15GB</field>
+      <field name="attribute_id" ref="dogomail_peso"/>
+    </record>
+
+    <record model="product.template" id="dogomail_dominio_mbox">
+      <field name="name">Account Mail Domain</field>
+      <field name="is_published" eval="True"/>
+      <field name="type">service</field>
+      <field name="uom_id" ref="uom.product_uom_unit"/>
+      <field name="uom_po_id" ref="uom.product_uom_unit"/>
+      <field name="description_sale">Mail domain with antispam and zimbra hosted mailbox.</field>
+      <field name="categ_id" ref="product.product_category_1"/>
+      <field name="invoice_policy">delivery</field>
+      <field name="service_policy">delivered_manual</field>
+      <field name="image_1920" type="base64" file="sale_dogomail/static/src/img/dogozimbra.png"/>
+    </record>
+
+    <record id="dogomail_dominio_mbox_tipo" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="dogomail_dominio_mbox"/>
+      <field name="attribute_id" ref="dogomail_tipo"/>
+      <field name="value_ids" eval="[(6, 0, [ref('sale_dogomail.dogomail_tipo_std'), ref('sale_dogomail.dogomail_tipo_pro')])]"/>
+    </record>
+    <record id="dogomail_dominio_mbox_casillas" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="dogomail_dominio_mbox"/>
+      <field name="attribute_id" ref="dogomail_casillas"/>
+      <field name="value_ids" eval="[(6, 0, [ref('sale_dogomail.dogomail_casillas_5'), ref('sale_dogomail.dogomail_casillas_10'), ref('sale_dogomail.dogomail_casillas_25'), ref('sale_dogomail.dogomail_casillas_50')])]"/>
+    </record>
+    <record id="dogomail_dominio_mbox_peso" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="dogomail_dominio_mbox"/>
+      <field name="attribute_id" ref="dogomail_peso"/>
+      <field name="value_ids" eval="[(6, 0, [ref('sale_dogomail.dogomail_peso_1'), ref('sale_dogomail.dogomail_peso_5'), ref('sale_dogomail.dogomail_peso_10'), ref('sale_dogomail.dogomail_peso_15')])]"/>
+    </record>
+
+    <record model="product.template" id="dogomail_dominio_fwd">
+      <field name="name">Forwarding Mail Domain</field>
+      <field name="is_published" eval="True"/>
+      <field name="type">service</field>
+      <field name="uom_id" ref="uom.product_uom_unit"/>
+      <field name="uom_po_id" ref="uom.product_uom_unit"/>
+      <field name="description_sale">Mail domain with forwarding antispam.</field>
+      <field name="categ_id" ref="product.product_category_1"/>
+      <field name="invoice_policy">delivery</field>
+      <field name="service_policy">delivered_manual</field>
+      <field name="image_1920" type="base64" file="sale_dogomail/static/src/img/dogofwd.png"/>
+    </record>
+
+    <record id="dogomail_dominio_fwd_tipo" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="dogomail_dominio_fwd"/>
+      <field name="attribute_id" ref="dogomail_tipo"/>
+      <field name="value_ids" eval="[(6, 0, [ref('sale_dogomail.dogomail_tipo_std'), ref('sale_dogomail.dogomail_tipo_pro')])]"/>
+    </record>
+  </data>
+</odoo>
