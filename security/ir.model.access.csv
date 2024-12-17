@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_dogomail_domain,sale.dogomail_domain,model_sale_dogomail_domain,sales_team.group_sale_salesman,1,1,1,1
+access_sale_dogomail_domain_move,sale.dogomail_domain.move,model_sale_dogomail_domain_move,sales_team.group_sale_salesman,1,1,1,1
+access_sale_dogomail_domain_stage,sale.dogomail_domain.stage,model_sale_dogomail_domain_stage,sales_team.group_sale_salesman,1,0,0,0
+access_sale_dogomail_domain_portal,sale.dogomail_domain.portal,model_sale_dogomail_domain,base.group_portal,1,0,0,0
+access_sale_dogomail_domain_stage_portal,sale.dogomail_domain.stage.portal,model_sale_dogomail_domain_stage,base.group_portal,1,0,0,0

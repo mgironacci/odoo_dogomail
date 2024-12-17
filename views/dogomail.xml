@@ -1,0 +1,168 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="dogomail_domain_list">
+      <field name="name">sale.dogomail.domain.tree</field>
+      <field name="model">sale.dogomail.domain</field>
+      <field name="arch" type="xml">
+        <tree decoration-muted="stage_category == 'done'"
+              decoration-info="stage_category == 'draft'">
+          <header>
+            <button name="set_draft" string="Set Draft"
+                    type="object" class="btn-secondary oe_read_only"/>
+            <button name="set_active" string="Set Active"
+                    type="object" class="btn-secondary oe_read_only"/>
+            <button name="set_done" string="Set Done"
+                    type="object" class="btn-secondary oe_read_only"/>
+            <button name="invoice_dogomaildomain" string="Generate invoices"
+                    type="object" class="btn-primary oe_read_only"/>
+          </header>
+          <field name="name"/>
+          <field name="partner_id"/>
+          <field name="product_id"/>
+          <field name="price"/>
+          <field name="l10n_ar_afip_concept"/>
+          <field name="currency_id"/>
+          <field name="do_status"
+                 decoration-success="do_status == 'done'"
+                 decoration-info="do_status == 'pending'"
+                 decoration-warning="do_status == 'delayed'"
+                 decoration-muted="do_status == 'not_yet'"
+                 widget="badge" optional="show"/>
+          <field name="stage_category" invisible="1"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="dogomail_domain_form">
+      <field name="name">sale.dogomail.domain.form</field>
+      <field name="model">sale.dogomail.domain</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <field name="current_stage" invisible="1"/>
+            <button name="invoice_dogomaildomain" string="Generate invoice"
+                    type="object" class="btn-primary oe_read_only"
+                    attrs="{'invisible': [('stage_category','!=', 'active')]}"/>
+            <field name="stage_id" widget="statusbar" options="{'clickable': 1}"/>
+          </header>
+          <sheet>
+            <div class="text-truncate w-100">
+              <h1>
+                  <field name="name" placeholder="e.g. ejemplo.com"  attrs="{'required': True}"/>
+              </h1>
+              <field name="description" placeholder="e.g. This is for domain ejemplo.com"/>
+            </div>
+            <group>
+              <group>
+                <field name="partner_id" attrs="{'required': True}"/>
+                <field name="l10n_ar_afip_concept" attrs="{'readonly': False}"/>
+                <field name="product_id" attrs="{'required': True}"/>
+                <field name="price" attrs="{'required': True}"/>
+                <field name="currency_id" attrs="{'required': True}"/>
+                <field name="repeticion" attrs="{'required': True}"/>
+              </group>
+              <group>
+                <field name="journal_id" domain="[('type', '=', 'sale')]"/>
+                <field name="document_type_id" domain="[('internal_type', '=', 'invoice')]"/>
+                <field name="do_status"
+                       decoration-success="do_status == 'done'"
+                       decoration-info="do_status == 'pending'"
+                       decoration-warning="do_status == 'delayed'"
+                       decoration-muted="do_status == 'not_yet'"
+                       widget="badge" optional="show"/>
+                <field name="notificar_ids" widget="many2many_tags" options="{'create': false, 'create_edit': false}"/>
+                <field name="company_id" invisible="1"/>
+                <field name="stage_category" invisible="1"/>
+             </group>
+            </group>
+            <group>
+              <field name="ref" help="Reference for the client" placeholder="e.g. Contract # NN"/>
+              <field name="notes" help="Notes to put on all generated invoices" placeholder="e.g. Value of dollar set by BNA on pay day"/>
+            </group>
+            <notebook>
+              <page string="Invoices" name="dogomaildomain_invoiced">
+                <field name="move_ids">
+                  <tree string="Generated invoices">
+                    <field name="create_date"/>
+                    <field name="move_id"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="message_ids" widget="mail_thread"/>
+            <field name="activity_ids" widget="mail_activity"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="dogomail_domain_graph">
+      <field name="name">sale.dogomail.domain.graph</field>
+      <field name="model">sale.dogomail.domain</field>
+      <field name="arch" type="xml">
+        <graph>
+          <field name="partner_id" type="row"/>
+          <field name="stage_category" type="col"/>
+          <field name="price" type="measure"/>
+        </graph>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="dogomail_domain_pivot">
+      <field name="name">sale.dogomail.domain.pivot</field>
+      <field name="model">sale.dogomail.domain</field>
+      <field name="arch" type="xml">
+        <pivot>
+          <field name="partner_id" type="row"/>
+          <field name="stage_category" type="col"/>
+          <field name="price" type="measure"/>
+        </pivot>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="dogomail_domain_search">
+      <field name="name">sale.dogomail.domain.search</field>
+      <field name="model">sale.dogomail.domain</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="partner_id"/>
+          <field name="product_id"/>
+          <field name="do_status"/>
+          <filter string="Active" domain="[('stage_category','=','active')]" name="actives"/>
+          <filter string="Pending" domain="[('do_status','=','pending')]" name="pending"/>
+          <filter string="Done" domain="[('do_status','=','done')]" name="done"/>
+          <group expand="0" string="Group By">
+              <filter string="Partner" name="group_partner_id" domain="[]"  context="{'group_by':'partner_id'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="sale_dogomail_domain_act">
+      <field name="name">Dogomail Domain</field>
+      <field name="res_model">sale.dogomail.domain</field>
+      <field name="view_mode">tree,form,pivot,graph</field>
+      <field name="search_view_id" ref="dogomail_domain_search"/>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Click to setup a dogomail domain.
+        </p>
+        <p>
+          You can create different dogomail domains.
+        </p>
+      </field>
+    </record>
+
+    <!-- Menu action item -->
+
+    <menuitem name="Dogomail Domains" id="dogomail_domain_menu" parent="sale.sale_order_menu"
+              action="sale_dogomail_domain_act" sequence="10" groups="sales_team.group_sale_salesman"/>
+
+  </data>
+</odoo>

@@ -20,37 +20,15 @@
 #
 ###################################################################################
 
-{
-    'name': "Dogomail",
+from odoo import models, fields, api
 
-    'summary': "Modulo de administracion de dominios de correo Dogomail",
 
-    'description': """
-Este modulo agrega la siguiente funcionalidad:
+class DogomailDomainMove(models.Model):
+    _name = 'sale.dogomail.domain.move'
+    _description = 'Dogomail Domain Invoice'
 
- - Productos de dominios para vender
- - Venta de dominios de correo por ecommerce
- - Administración de la suscripcion de dominios y facturacion
- - Estadísticas de uso de los dominios
-    """,
+    dogomail_domain_id = fields.Many2one('sale.dogomail.domain', store=True, string='Dogomail Domain')
+    company_id = fields.Many2one('res.company', string='Company', store=True, related='dogomail_domain_id.company_id')
+    move_id = fields.Many2one('account.move', store=True, string='Invoice')
+    create_date = fields.Datetime(string='Create date', store=True, default=fields.Datetime.now)
 
-    'author': "Itecnis SRL",
-    'website': "https://www.itecnis.com",
-
-    'category': 'Sales/Sales',
-    'version': '15.0.1.0',
-
-    'depends': ['sale_management', 'sale_suscripcion', 'website_sale'],
-
-    'data': [
-        'security/ir.model.access.csv',
-        'views/dogomail.xml',
-        'views/templates.xml',
-        'views/portal.xml',
-        'data/productos.xml',
-        'data/dogomail_stage.xml',
-        'data/ir_cron_data.xml',
-        'security/dogomail_security.xml',
-    ],
-    'license': 'LGPL-3',
-}

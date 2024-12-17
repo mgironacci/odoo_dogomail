@@ -20,37 +20,23 @@
 #
 ###################################################################################
 
-{
-    'name': "Dogomail",
+from odoo import models, fields
 
-    'summary': "Modulo de administracion de dominios de correo Dogomail",
 
-    'description': """
-Este modulo agrega la siguiente funcionalidad:
+class DogomailDomainStage(models.Model):
+    _name = "sale.dogomail.domain.stage"
+    _description = "Dogomail Domain Stages"
+    _rec_name = 'name'
 
- - Productos de dominios para vender
- - Venta de dominios de correo por ecommerce
- - Administración de la suscripcion de dominios y facturacion
- - Estadísticas de uso de los dominios
-    """,
-
-    'author': "Itecnis SRL",
-    'website': "https://www.itecnis.com",
-
-    'category': 'Sales/Sales',
-    'version': '15.0.1.0',
-
-    'depends': ['sale_management', 'sale_suscripcion', 'website_sale'],
-
-    'data': [
-        'security/ir.model.access.csv',
-        'views/dogomail.xml',
-        'views/templates.xml',
-        'views/portal.xml',
-        'data/productos.xml',
-        'data/dogomail_stage.xml',
-        'data/ir_cron_data.xml',
-        'security/dogomail_security.xml',
-    ],
-    'license': 'LGPL-3',
-}
+    name = fields.Char(string='Stage Name', required=True)
+    sequence = fields.Integer('Sequence', help="Determine the display order",
+                              index=True)
+    condition = fields.Text(string='Conditions')
+    fold = fields.Boolean(string='Folded in Kanban',
+                          help="This stage is folded in the kanban view "
+                               "when there are no records in that stage "
+                               "to display.")
+    category = fields.Selection([('draft', 'Draft'),
+                                 ('active', 'Active'),
+                                 ('done', 'Done')],
+                                readonly=False, default='draft')

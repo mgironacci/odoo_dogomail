@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="portal_layout"
+        name="Portal layout: dogomail menu entry"
+        inherit_id="portal.portal_breadcrumbs"
+        priority="40"
+    >
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li
+                t-if="page_name == 'dogomail' or dogomail"
+                t-attf-class="breadcrumb-item #{'active ' if not dogomail else ''}"
+            >
+                <a
+                    t-if="dogomail"
+                    t-attf-href="/my/dogomail?{{ keep_query() }}"
+                >Dogomail</a>
+                <t t-else="">Dogomail</t>
+            </li>
+            <li t-if="dogomail" class="breadcrumb-item active text-truncate">
+                <span t-field="dogomail.name" />
+            </li>
+        </xpath>
+    </template>
+
+    <template
+        id="portal_my_home"
+        name="Portal My Home : dogomail entries"
+        inherit_id="portal.portal_my_home"
+        priority="40"
+        customize_show="True"
+    >
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Dogomail</t>
+                <t t-set="url" t-value="'/my/dogomail'" />
+                <t t-set="placeholder_count" t-value="'dogomail_count'" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="portal_my_dogomail" name="My Dogomail Domains">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True" />
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Dogomail</t>
+            </t>
+
+            <t t-if="not grouped_dogomail">
+                <div class="alert alert-warning mt8" role="alert">
+                    <p>No domains found.</p>
+                </div>
+            </t>
+            <t t-call="sale_dogomail.portal_dogomail_list" />
+        </t>
+    </template>
+
+    <template id="portal_dogomail_list" name="Dogomail Domain List">
+        <t t-if="grouped_dogomail">
+            <t t-call="portal.portal_table">
+                <t t-foreach="grouped_dogomail" t-as="dogomails">
+                    <thead>
+                        <tr
+                            t-attf-class="{{'thead-light' if not groupby == 'none' else ''}}"
+                        >
+                                <th t-if="groupby == 'none'" class="text-left">Name</th>
+                                <th class="text-left">Product</th>
+                                <th t-if="groupby == 'stage'">
+                                    <em
+                                    class="font-weight-normal text-muted"
+                                >Dogomail Domains in stage:</em>
+                                    <span
+                                    class="text-truncate"
+                                    t-field="dogomails[0].sudo().stage_id.name"
+                                /></th>
+                                <th t-if="groupby != 'stage'">Stage</th>
+                                <th>Create Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="dogomails" t-as="dogomail">
+                            <tr>
+                                <td class="text-left">
+                                    <a t-attf-href="/my/dogomail/#{dogomail.id}?{{ keep_query() }}">
+                                        <span t-field="dogomail.name" />
+                                    </a>
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="dogomail.product_id.name" />
+                                </td>
+                                <td t-if="groupby != 'stage'">
+                                    <span
+                                        class="badge badge-pill badge-info"
+                                        title="Current stage of the dogomail"
+                                        t-esc="dogomail.stage_id.name"
+                                    />
+                                </td>
+                                <td>
+                                    <span t-field="dogomail.create_date" />
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_dogomail_domain_page" name="Dogomail Domain Portal Template">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <h5 class="d-flex mb-1 mb-md-0 row">
+                                <div class="col-9">
+                                    <span t-field="dogomail.name" class="text-truncate" />
+                                </div>
+                                <div class="col-3 text-right">
+                                    <small class="text-right">Stage:</small>
+                                    <span
+                                        t-field="dogomail.stage_id.name"
+                                        class=" badge badge-pill badge-info"
+                                        title="Current stage of this dogomail"
+                                    />
+                                </div>
+                            </h5>
+                        </div>
+                    </div>
+                </t>
+
+                <t t-set="card_body">
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6" name="portal_dogomail_col_0">
+                            <div><strong>Date:</strong> <span
+                                    t-field="dogomail.create_date"
+                                    t-options='{"widget": "datetime"}'
+                                /></div>
+                        </div>
+                        <div
+                            class="col-12 col-md-6 text-right"
+                            name="portal_dogomail_col_1"
+                        >
+                        </div>
+                    </div>
+
+                </t>
+            </t>
+
+            <div class="mt32">
+                <h4><strong>Message and communication history</strong></h4>
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="dogomail" />
+                    <t t-set="token" t-value="dogomail.access_token" />
+                    <t t-set="pid" t-value="pid" />
+                    <t t-set="hash" t-value="hash" />
+                </t>
+            </div>
+        </t>
+    </template>
+
+</odoo>

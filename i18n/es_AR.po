@@ -6,22 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 00:23+0000\n"
-"PO-Revision-Date: 2023-02-20 21:26-0300\n"
+"POT-Creation-Date: 2024-12-17 01:53+0000\n"
+"PO-Revision-Date: 2024-12-16 23:06-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"Language: es_AR\n"
-"X-Generator: Poedit 2.3\n"
-
-#. module: sale_dogomail
-#: code:addons/sale_dogomail/models/suscripcion_line.py:0
-#, python-format
-msgid " - period %(month)s/%(year)s"
-msgstr " - periodo %(month)s/%(year)s"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4\n"
 
 #. module: sale_dogomail
 #: model:product.attribute.value,name:sale_dogomail.dogomail_casillas_10
@@ -59,9 +53,277 @@ msgid "5GB"
 msgstr ""
 
 #. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_list
+msgid ""
+"<em class=\"font-weight-normal text-muted\">Dogomail Domains in stage:</em>"
+msgstr ""
+"<em class=\"font-weight-normal text-muted\">Dogomail Domains en etapa:</em>"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_domain_page
+msgid "<small class=\"text-right\">Stage:</small>"
+msgstr "<small class=\"text-right\">Etapa:</small>"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_domain_page
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Fecha:</strong>"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_domain_page
+msgid "<strong>Message and communication history</strong>"
+msgstr "<strong>Historial de mensajes y comunicación</strong>"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__l10n_ar_afip_concept
+msgid ""
+"A concept is suggested regarding the type of the products on the invoice "
+"but it is allowed to force a different type if required."
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__l10n_ar_afip_concept
+msgid "AFIP Concept"
+msgstr "Concepto AFIP"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: sale_dogomail
 #: model:product.template,name:sale_dogomail.dogomail_dominio_mbox
 msgid "Account Mail Domain"
 msgstr "Dominio Correo con Casillas"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_needaction
+msgid "Action Needed"
+msgstr "Acción Necesaria"
+
+#. module: sale_dogomail
+#: model:ir.model.fields.selection,name:sale_dogomail.selection__sale_dogomail_domain_stage__category__active
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_search
+msgid "Active"
+msgstr "Activo"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_state
+msgid "Activity State"
+msgstr "Estado Actividad"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/controllers/myaccount.py:0
+#, python-format
+msgid "All"
+msgstr "Todo"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__stage_category
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__category
+msgid "Category"
+msgstr "Categoría"
+
+#. module: sale_dogomail
+#: model_terms:ir.actions.act_window,help:sale_dogomail.sale_dogomail_domain_act
+msgid "Click to setup a dogomail domain."
+msgstr "Presione para configurar un dominio dogomail."
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__company_id
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__condition
+msgid "Conditions"
+msgstr "Condiciones"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_list
+msgid "Create Date"
+msgstr "Fecha Creación"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move__create_date
+msgid "Create date"
+msgstr "Fecha creación"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__create_uid
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move__create_uid
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__create_date
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__current_stage
+msgid "Current Stage"
+msgstr "Etapa Actual"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_list
+msgid "Current stage of the dogomail"
+msgstr "Etapa actual del dogomail"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_domain_page
+msgid "Current stage of this dogomail"
+msgstr "Etapa actual de este dogomail"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__partner_id
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__access_url
+msgid "Customer Portal URL"
+msgstr "URL Portal Cliente"
+
+#. module: sale_dogomail
+#: model:ir.model.fields.selection,name:sale_dogomail.selection__sale_dogomail_domain__do_status__delayed
+msgid "Delayed"
+msgstr "Retrasado"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain_stage__sequence
+msgid "Determine the display order"
+msgstr "Determinar orden de mostrado"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__display_name
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move__display_name
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__display_name
+msgid "Display Name"
+msgstr "Nombre Mostrado"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__do_status
+msgid "Do Status"
+msgstr "Estado A"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__document_type_id
+msgid "Document Type"
+msgstr "Tipo Documento"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_layout
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_my_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_my_home
+msgid "Dogomail"
+msgstr "Dogomail"
+
+#. module: sale_dogomail
+#: model:ir.actions.act_window,name:sale_dogomail.sale_dogomail_domain_act
+#: model:ir.model,name:sale_dogomail.model_sale_dogomail_domain
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move__dogomail_domain_id
+msgid "Dogomail Domain"
+msgstr "Dominio Dogomail"
+
+#. module: sale_dogomail
+#: model:ir.model,name:sale_dogomail.model_sale_dogomail_domain_move
+msgid "Dogomail Domain Invoice"
+msgstr "Factura Dominio Dogomail"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__move_ids
+msgid "Dogomail Domain Invoices"
+msgstr "Facturas Dominio Dogomail"
+
+#. module: sale_dogomail
+#: model:ir.model,name:sale_dogomail.model_sale_dogomail_domain_stage
+msgid "Dogomail Domain Stages"
+msgstr "Etapas Dominio Dogomail"
+
+#. module: sale_dogomail
+#: model:ir.ui.menu,name:sale_dogomail.dogomail_domain_menu
+msgid "Dogomail Domains"
+msgstr "Dominios Dogomail"
+
+#. module: sale_dogomail
+#: model:ir.actions.server,name:sale_dogomail.ir_cron_dolarsi_ir_actions_server
+#: model:ir.cron,cron_name:sale_dogomail.ir_cron_dolarsi
+#: model:ir.cron,name:sale_dogomail.ir_cron_dolarsi
+msgid "DogomailDomain: Update Dolar Si"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.actions.server,name:sale_dogomail.ir_cron_status_dogomail_domain_ir_actions_server
+#: model:ir.cron,cron_name:sale_dogomail.ir_cron_status_dogomail_domain
+#: model:ir.cron,name:sale_dogomail.ir_cron_status_dogomail_domain
+msgid "DogomailDomain: Update to Do Status"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__name
+msgid "Domain name"
+msgstr "Nombre dominio"
+
+#. module: sale_dogomail
+#: model:ir.model.fields.selection,name:sale_dogomail.selection__sale_dogomail_domain__do_status__done
+#: model:ir.model.fields.selection,name:sale_dogomail.selection__sale_dogomail_domain_stage__category__done
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_search
+msgid "Done"
+msgstr "Hecho"
+
+#. module: sale_dogomail
+#: model:ir.model.fields.selection,name:sale_dogomail.selection__sale_dogomail_domain_stage__category__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__fold
+msgid "Folded in Kanban"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
 
 #. module: sale_dogomail
 #: model:product.template,name:sale_dogomail.dogomail_dominio_fwd
@@ -84,10 +346,119 @@ msgstr ""
 "ONGs."
 
 #. module: sale_dogomail
-#: code:addons/sale_dogomail/models/suscripcion.py:0
-#, python-format
-msgid "Item %(seq)s used rate: %(sim)s %(val)s<br/>"
-msgstr "Tasa aplicada al item %(seq)s: %(sim)s %(val)s<br/>"
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_form
+msgid "Generate invoice"
+msgstr "Generar factura"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_list
+msgid "Generate invoices"
+msgstr "Generar facturas"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_form
+msgid "Generated invoices"
+msgstr "Facturas generadas"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_search
+msgid "Group By"
+msgstr "Agrupar Por"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__has_message
+msgid "Has Message"
+msgstr "Tiene Mensaje"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__id
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move__id
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_exception_icon
+msgid "Icon"
+msgstr "Ícono"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__message_needaction
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__message_has_error
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move__move_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__currency_id
+msgid "Invoice Currency"
+msgstr "Moneda FActura"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__repeticion
+msgid "Invoice Every X Month"
+msgstr "Factura Cada X Meses"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_form
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain____last_update
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move____last_update
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__last_month
+msgid "Last Month Invoiced"
+msgstr "Último Mes Facturado"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__write_uid
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move__write_uid
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__write_uid
+msgid "Last Updated by"
+msgstr "Última Actualización por"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__write_date
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_move__write_date
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización el"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__last_year
+msgid "Last Year Invoiced"
+msgstr "Último Año Facturado"
 
 #. module: sale_dogomail
 #: model:product.template,description_sale:sale_dogomail.dogomail_dominio_mbox
@@ -105,11 +476,130 @@ msgid "Mailbox"
 msgstr "Casilla"
 
 #. module: sale_dogomail
-#: code:addons/sale_dogomail/models/suscripcion.py:0
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Entrega de Mensaje"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/controllers/myaccount.py:0
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_list
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/controllers/myaccount.py:0
+#, python-format
+msgid "Newest"
+msgstr "Más Nuevo"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__next_month
+msgid "Next Month To Invoice"
+msgstr "Próximo Mes A Facturar"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__next_year
+msgid "Next Year To Invoice"
+msgstr "Próximo Año A Facturar"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_my_dogomail
+msgid "No domains found."
+msgstr "No se encontraron dominios."
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/models/dogomail.py:0
 #, python-format
 msgid ""
 "No journal could be found in company %(company_name)s for any of those "
 "types: %(journal_types)s"
+msgstr ""
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/controllers/myaccount.py:0
+#, python-format
+msgid "None"
+msgstr "Ninguno"
+
+#. module: sale_dogomail
+#: model:ir.model.fields.selection,name:sale_dogomail.selection__sale_dogomail_domain__do_status__not_yet
+msgid "Not Yet"
+msgstr "No Todavía"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_form
+msgid "Notes to put on all generated invoices"
+msgstr "Notas a poner en las facturas generadas"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__notificar_ids
+msgid "Notify Partners"
+msgstr "Notificar Empresas"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de Acciones"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__message_unread_counter
+msgid "Number of unread messages"
 msgstr ""
 
 #. module: sale_dogomail
@@ -118,9 +608,111 @@ msgid "PRO"
 msgstr "PRO"
 
 #. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_search
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__notificar_ids
+msgid "Partners to suscribe on invoices activity"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields.selection,name:sale_dogomail.selection__sale_dogomail_domain__do_status__pending
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_search
+msgid "Pending"
+msgstr "Pendiente"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__access_url
+msgid "Portal Access URL"
+msgstr "URL Acceso Portal"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__price
+msgid "Price"
+msgstr "Precio"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__product_id
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_list
+msgid "Product"
+msgstr "Producto"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__ref
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_form
+msgid "Reference for the client"
+msgstr "Referencia para el cliente"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario Responsable"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/controllers/myaccount.py:0
+#, python-format
+msgid "Search in All"
+msgstr "Buscar en Todo"
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/controllers/myaccount.py:0
+#, python-format
+msgid "Search in Title"
+msgstr "Buscar en Titulo"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__access_token
+msgid "Security Token"
+msgstr "Token Seguridad"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_list
+msgid "Set Active"
+msgstr "Poner Activo"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_list
+msgid "Set Done"
+msgstr "Poner Hecho"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_list
+msgid "Set Draft"
+msgstr "Poner Borrador"
+
+#. module: sale_dogomail
 #: model:product.attribute,name:sale_dogomail.dogomail_peso
 msgid "Size"
 msgstr "Tamaño"
+
+#. module: sale_dogomail
+#: code:addons/sale_dogomail/controllers/myaccount.py:0
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__stage_id
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.portal_dogomail_list
+#, python-format
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain_stage__name
+msgid "Stage Name"
+msgstr "Nombre Etapa"
 
 #. module: sale_dogomail
 #: model:product.attribute.value,name:sale_dogomail.dogomail_tipo_std
@@ -128,9 +720,30 @@ msgid "Standard"
 msgstr "Estandar"
 
 #. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain_stage__fold
+msgid ""
+"This stage is folded in the kanban view when there are no records in that "
+"stage to display."
+msgstr ""
+
+#. module: sale_dogomail
 #: model:product.attribute,name:sale_dogomail.dogomail_tipo
 msgid "Type"
 msgstr "Tipo"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
 
 #. module: sale_dogomail
 #: model:product.product,uom_name:sale_dogomail.dogomail_dominio_free
@@ -139,3 +752,48 @@ msgstr "Tipo"
 #: model:product.template,uom_name:sale_dogomail.dogomail_dominio_mbox
 msgid "Units"
 msgstr "Unidades"
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,field_description:sale_dogomail.field_sale_dogomail_domain__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sale_dogomail
+#: model:ir.model.fields,help:sale_dogomail.field_sale_dogomail_domain__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sale_dogomail
+#: model_terms:ir.actions.act_window,help:sale_dogomail.sale_dogomail_domain_act
+msgid "You can create different dogomail domains."
+msgstr "Puede crear diferentes dominios dogomail."
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_form
+msgid "e.g. Contract # NN"
+msgstr "p.e. Contrato # NN"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_form
+msgid "e.g. This is for domain ejemplo.com"
+msgstr "p.e. Este dominio es para ejemplo.com"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_form
+msgid "e.g. Value of dollar set by BNA on pay day"
+msgstr "p.e. Valor del dolar del BNA en el día"
+
+#. module: sale_dogomail
+#: model_terms:ir.ui.view,arch_db:sale_dogomail.dogomail_domain_form
+msgid "e.g. ejemplo.com"
+msgstr "p.e. ejemplo.com"
